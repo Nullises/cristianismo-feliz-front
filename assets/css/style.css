@@ -1,15 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 a {
     text-decoration: none;
   }
   
   h1 {
-    font-family: Staatliches;
-    font-size: 120px;
+    font-family: Raleway, sans-serif;
+    font-weight: 100;
+    font-size: 120px; 
   }
   
   #category {
-    font-family: Staatliches;
-    font-weight: 500;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
   }
   
   #title {
@@ -22,6 +26,7 @@ a {
   #banner {
     margin: 20px;
     height: 800px;
+    background-color: #eceff1 !important;
   }
   
   #editor {
@@ -32,9 +37,17 @@ a {
   
   .uk-navbar-container {
     background: #fff !important;
-    font-family: Staatliches;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .uk-card-body {
+     background-color: #eceff1 !important;
   }
   
+  .uk-section {
+    background-color: #eceff1 !important;
+  }
+
   img:hover {
     opacity: 1;
     transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);

@@ -34,7 +34,7 @@ const Article = ({ article, categories }) => {
           <ReactMarkdown children={article.attributes.content} />
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            <div>
+            <div className="bg-article">
               {article.attributes.author.data.attributes.picture && (
                 <img
                   src={getStrapiMedia(
