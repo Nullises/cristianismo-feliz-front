@@ -15,7 +15,7 @@ const Category = ({ category, categories }) => {
       <Seo seo={seo} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <h1>{category.attributes.name}</h1>
+          <h1 className="text-5xl mb-10">{category.attributes.name}</h1>
           <Articles articles={category.attributes.articles.data} />
         </div>
       </div>

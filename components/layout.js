@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Nav from "./nav";
 import Footer from "./footer";
 

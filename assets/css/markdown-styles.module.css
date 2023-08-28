@@ -1,0 +1,63 @@
+
+.reactMarkDown {
+    text-align: justify;
+  text-justify: inter-word;
+}
+    .reactMarkDown p {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    .reactMarkDown i {
+        color: black;
+    }
+
+    .reactMarkDown em {
+        color: black;
+    }
+
+    .reactMarkDown ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  list-style: disc outside none;
+}
+
+.reactMarkDown ul li {
+  margin-left: 2em;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+      .reactMarkDown h1 {
+        font-family: Raleway, sans-serif;
+    font-weight: 100;
+        font-size: 3em;
+        margin-top: 10px;
+    }
+
+    .reactMarkDown h2 {
+        font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+        font-size: 2.5em;
+        margin-top: 10px;
+    }
+
+    .reactMarkDown h3 {
+        font-family: 'Bebas Neue', sans-serif;
+    font-weight: 300;
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+
+    .reactMarkDown h4 {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+
+    .reactMarkDown hr {
+        width: 200px;
+        height: 20px;
+        margin: 60px auto;
+        background: radial-gradient(circle closest-side, #d4d4d4 98%, #0000) 0/calc(100%/5) 100%;
+        border: none;
+    }
