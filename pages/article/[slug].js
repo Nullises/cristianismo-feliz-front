@@ -18,8 +18,6 @@ const Article = ({ article, categories }) => {
     article: true,
   };
 
-  console.log(article.attributes.content);
-
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
