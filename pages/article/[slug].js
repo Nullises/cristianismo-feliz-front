@@ -28,11 +28,18 @@ const Article = ({ article, categories }) => {
         data-srcset={imageUrl}
         data-uk-img
       >
-        <h1 className="text-5xl">{article.attributes.title}</h1>
+        <h1 className="text-5xl drop-shadow-2xl">{article.attributes.title}</h1>
       </div>
       <div className="uk-section">
         <div className="uk-container uk-container-small">
-          <ReactMarkdown className={style.reactMarkDown}>
+          <ReactMarkdown
+            className={style.reactMarkDown}
+            transformImageUri={(uri) =>
+              uri.startsWith("http")
+                ? uri
+                : `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}${uri}`
+            }
+          >
             {article.attributes.content}
           </ReactMarkdown>
           <hr className="uk-divider-small" />
