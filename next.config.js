@@ -4,7 +4,10 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "default",
-    domains: ["localhost"],
+    domains: [
+      "localhost",
+      "https://cristianismofeliz-backend-40a73ff0bb26.herokuapp.com/",
+    ],
   },
 };
 
