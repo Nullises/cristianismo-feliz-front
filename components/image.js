@@ -4,6 +4,8 @@ import NextImage from "next/image";
 const Image = ({ image }) => {
   const { alternativeText, width, height } = image.data.attributes;
 
+  console.log("image", image);
+
   return (
     <NextImage
       layout="responsive"

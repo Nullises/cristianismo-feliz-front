@@ -8,6 +8,14 @@ const nextConfig = {
       "localhost",
       "https://cristianismofeliz-backend-40a73ff0bb26.herokuapp.com",
     ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+        port: "",
+        pathname: "/crisfeliz-bucket/**",
+      },
+    ],
   },
 };
 
