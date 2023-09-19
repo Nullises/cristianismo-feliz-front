@@ -18,6 +18,16 @@ const Article = ({ article, categories }) => {
     article: true,
   };
 
+  function LinkRenderer(props) {
+    console.log({ props });
+    const link = props?.children?.[0];
+    return (
+      <a href={link} target="_blank" rel="noreferrer">
+        {link}
+      </a>
+    );
+  }
+
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
@@ -34,6 +44,7 @@ const Article = ({ article, categories }) => {
         <div className="uk-container uk-container-small">
           <ReactMarkdown
             className={style.reactMarkDown}
+            components={{ a: LinkRenderer }}
             transformImageUri={(uri) =>
               uri.startsWith("http")
                 ? uri

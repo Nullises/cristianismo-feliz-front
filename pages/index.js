@@ -13,7 +13,7 @@ const DynamicLayout = dynamic(() => import("../components/layout"), {
 });
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
-import es from "../assets/img/es.png";
+import jesus from "../assets/img/jesus.png";
 
 const Home = ({ articles, categories, homepage }) => {
   return (
@@ -24,7 +24,7 @@ const Home = ({ articles, categories, homepage }) => {
           <div className="uk-container">
             <div className="flex justify-center mt-1">
               <Image
-                src={es}
+                src={jesus}
                 width={100}
                 height={100}
                 className="w-1/8 h-1/8"
