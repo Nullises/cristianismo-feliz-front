@@ -12,6 +12,7 @@ import {
   MobileNav,
 } from "@material-tailwind/react";
 import es from "../assets/img/es.svg";
+import jesus from "../assets/img/jesus.png";
 
 const Nav = ({ categories }) => {
   const [openNav, setOpenNav] = React.useState(false);
@@ -45,13 +46,13 @@ const Nav = ({ categories }) => {
   return (
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <div className="flex display: inline-block">
+        <div className="flex display: inline-block items-center">
           <Typography
             as="a"
             href="#"
             className="opacity-80 transition-opacity hover:opacity-100 mr-2 mt-1"
           >
-            <Image width={25} height={25} alt="cf-logo" src={es}></Image>
+            <Image width={50} height={50} alt="cf-logo" src={jesus}></Image>
           </Typography>
           <Typography
             as="a"
