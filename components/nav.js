@@ -63,7 +63,7 @@ const Nav = ({ categories }) => {
           </Typography>
         </div>
         <div className="flex items-center gap-4">
-          <div className="mr-4 hidden lg:block">{navList}</div>
+          <div className="mr-4">{navList}</div>
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
