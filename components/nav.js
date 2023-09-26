@@ -7,15 +7,17 @@ import {
   Select,
   Option,
   Navbar,
+  Collapse,
   Typography,
   IconButton,
-  MobileNav,
 } from "@material-tailwind/react";
 import es from "../assets/img/es.svg";
 import jesus from "../assets/img/jesus.png";
 
 const Nav = ({ categories }) => {
   const [openNav, setOpenNav] = React.useState(false);
+
+  const toggleOpen = () => setOpenNav((cur) => !cur);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -25,21 +27,43 @@ const Nav = ({ categories }) => {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 primary">
-      <Select color="blue-gray-200" size="md" label="Categorías">
-        {categories.map((category) => {
+    <ul className="mb-auto mt-auto flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-6 primary">
+      <a
+        className="xs:mt-auto text-blue-gray-200"
+        href="https://cf-first.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Seminarios
+      </a>
+      {!openNav ? (
+        <Select color="blue-gray-200" label="Categorías">
+          {categories.map((category) => {
+            return (
+              <Option key={category.id}>
+                <Link
+                  legacyBehavior
+                  href={`/category/${category.attributes.slug}`}
+                >
+                  <a className="uk-link-reset">{category.attributes.name}</a>
+                </Link>
+              </Option>
+            );
+          })}
+        </Select>
+      ) : (
+        categories.map((category, key) => {
           return (
-            <Option key={category.id}>
-              <Link
-                legacyBehavior
-                href={`/category/${category.attributes.slug}`}
-              >
-                <a className="uk-link-reset">{category.attributes.name}</a>
-              </Link>
-            </Option>
+            <a
+              key={key}
+              className="xs:mt-auto text-blue-gray-200"
+              href={`/category/${category.attributes.slug}`}
+            >
+              {category.attributes.name}
+            </a>
           );
-        })}
-      </Select>
+        })
+      )}
     </ul>
   );
 
@@ -63,9 +87,47 @@ const Nav = ({ categories }) => {
           </Typography>
         </div>
         <div className="flex items-center gap-4">
-          <div className="mr-4">{navList}</div>
+          <div className="mr-1 hidden lg:inline-block">{navList}</div>
+          <IconButton
+            variant="text"
+            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            ripple={false}
+            onClick={() => toggleOpen()}
+          >
+            {openNav ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                className="h-6 w-6"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </IconButton>
         </div>
       </div>
+      <Collapse open={openNav}>{navList}</Collapse>
     </Navbar>
   );
 };
