@@ -37,6 +37,27 @@ const Home = ({ articles, categories, homepage }) => {
                 {homepage.attributes.hero.title}
               </h1>
             </div>
+            <div className="uk-section">
+              <div className="uk-container">
+                <div className="flex justify-center self-center mb-8 mt-2">
+                  <h1 className="text-5xl text-center">
+                    ¡NUEVO CANAL DE YOUTUBE!
+                  </h1>
+                </div>
+                <h1 className="text-4xl text-center mb-10">
+                  No olvides suscribirte y activar las notificaciones, y
+                  compartir a más personas
+                </h1>
+                <div className="flex justify-center mt-1">
+                  <iframe
+                    width="1200"
+                    height="600"
+                    src="https://www.youtube.com/embed/JEHA6OE76n4"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <h1 className="text-4xl text-center mb-10">ARTÍCULOS</h1>
             <DynamicArticles articles={articles} />
           </div>
         </div>
