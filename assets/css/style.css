@@ -7,6 +7,9 @@ a {
   
   h1 {
     font-family: Raleway, sans-serif;
+    background-color: #263238 !important;
+    color: #eceff1 !important;
+    padding: 10px;
     font-weight: 100;
   }
   
