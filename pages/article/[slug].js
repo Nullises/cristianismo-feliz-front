@@ -38,7 +38,9 @@ const Article = ({ article, categories }) => {
         data-srcset={imageUrl}
         data-uk-img
       >
-        <h1 className="text-5xl drop-shadow-2xl">{article.attributes.title}</h1>
+        <h2 className="title-article text-5xl drop-shadow-2xl">
+          {article.attributes.title}
+        </h2>
       </div>
       <div className="uk-section">
         <div className="uk-container uk-container-small">
