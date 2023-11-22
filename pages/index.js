@@ -46,8 +46,7 @@ const Home = ({ articles, categories, homepage }) => {
                 </div>
                 <h1 className="text-4xl text-center mb-10">
                   No olvides suscribirte y activar las notificaciones, y
-                  compartir los videos para que nuestros hermanos vivan un
-                  cristianismo feliz
+                  compartir a más personas
                 </h1>
                 <div className="flex justify-center mt-1">
                   <iframe
@@ -55,33 +54,6 @@ const Home = ({ articles, categories, homepage }) => {
                     height="600"
                     src="https://www.youtube.com/embed/JEHA6OE76n4"
                   ></iframe>
-                </div>
-              </div>
-            </div>
-            <div className="uk-section">
-              <div className="uk-container">
-                <div className="flex justify-center self-center mb-8 mt-2">
-                  <h1 className="text-5xl text-center">
-                    ¡NUEVO GRUPO DE FACEBOOK!
-                  </h1>
-                </div>
-                <h1 className="text-4xl text-center mb-10">
-                  Únete y comparte los artículos con nuestros hermanos, para que
-                  más y más personas vivan un cristianismo feliz
-                </h1>
-                <div className="flex justify-center mt-1">
-                  <a
-                    href="https://www.facebook.com/groups/1257994208210335"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Image
-                      src={
-                        "https://www.facebook.com/photo/?fbid=2744371792379878&set=p.2744371792379878"
-                      }
-                      alt="cristianismo_feliz_facebook"
-                    />
-                  </a>
                 </div>
               </div>
             </div>
