@@ -4,10 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "default",
-    domains: [
-      "localhost",
-      "https://cristianismofeliz-backend-40a73ff0bb26.herokuapp.com",
-    ],
+    domains: ["localhost", "https://cristianismo-feliz-backend.up.railway.app"],
     remotePatterns: [
       {
         protocol: "https",
