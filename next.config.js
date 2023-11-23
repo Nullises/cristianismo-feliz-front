@@ -4,7 +4,11 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "default",
-    domains: ["localhost", "https://cristianismo-feliz-backend.up.railway.app"],
+    domains: [
+      "localhost",
+      "https://cristianismo-feliz-backend.up.railway.app",
+      "res.cloudinary.com",
+    ],
     remotePatterns: [
       {
         protocol: "https",
