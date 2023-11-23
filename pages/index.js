@@ -14,7 +14,7 @@ const DynamicLayout = dynamic(() => import("../components/layout"), {
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 import jesus from "../assets/img/jesus.png";
-import jesus_isologo from "../assets/img/cf-isologotipo.png";
+import fb_hero from "../assets/img/fb.jpeg";
 
 const Home = ({ articles, categories, homepage }) => {
   return (
@@ -46,7 +46,8 @@ const Home = ({ articles, categories, homepage }) => {
                 </div>
                 <h1 className="text-4xl text-center mb-10">
                   No olvides suscribirte y activar las notificaciones, y
-                  compartir a más personas
+                  compartir los videos para que más y más personas vivan un
+                  cristianismo feliz
                 </h1>
                 <div className="flex justify-center mt-1">
                   <iframe
@@ -55,6 +56,26 @@ const Home = ({ articles, categories, homepage }) => {
                     src="https://www.youtube.com/embed/JEHA6OE76n4"
                   ></iframe>
                 </div>
+              </div>
+            </div>
+            <div className="uk-section">
+              <div className="uk-container">
+                <div className="flex justify-center self-center mb-8 mt-2">
+                  <h1 className="text-5xl text-center">
+                    ¡NUEVO GRUPO EN FACEBOOK!
+                  </h1>
+                </div>
+                <h1 className="text-4xl text-center mb-10">
+                  No olvides unirte y compartir los artículos para que más y más
+                  personas vivan un cristianismo feliz
+                </h1>
+                <a
+                  href="https://www.facebook.com/groups/1257994208210335"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={fb_hero} alt="Cristianismo Feliz" />
+                </a>
               </div>
             </div>
             <h1 className="text-4xl text-center mb-10">ARTÍCULOS</h1>
