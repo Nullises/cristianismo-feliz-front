@@ -36,7 +36,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   const matchingCategories = await fetchAPI("/categories", {
     filters: { slug: params.slug },
     populate: {
