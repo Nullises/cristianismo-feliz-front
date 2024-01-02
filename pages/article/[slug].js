@@ -7,6 +7,7 @@ import Layout from "../../components/layout";
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media";
 import style from "../../assets/css/markdown-styles.module.css";
+import Image from "next/image";
 
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.attributes.image);
@@ -59,20 +60,23 @@ const Article = ({ article, categories }) => {
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div className="bg-article">
               {article.attributes.author.data.attributes.picture && (
-                <img
-                  src={getStrapiMedia(
-                    article.attributes.author.data.attributes.picture
-                  )}
-                  alt={
-                    article.attributes.author.data.attributes.picture.data
-                      .attributes.alternativeText
-                  }
+                <div
                   style={{
                     position: "static",
                     borderRadius: "20%",
                     height: 60,
                   }}
-                />
+                >
+                  <Image
+                    src={getStrapiMedia(
+                      article.attributes.author.data.attributes.picture
+                    )}
+                    alt={
+                      article.attributes.author.data.attributes.picture.data
+                        .attributes.alternativeText
+                    }
+                  />
+                </div>
               )}
             </div>
             <div className="uk-width-expand">
