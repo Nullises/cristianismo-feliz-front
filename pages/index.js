@@ -44,11 +44,11 @@ const Home = ({ articles, categories, homepage }) => {
                     ¡NUEVO CANAL DE YOUTUBE!
                   </h1>
                 </div>
-                <h1 className="text-4xl text-center mb-10">
+                <span className="text-4xl text-center mb-10">
                   No olvides suscribirte y activar las notificaciones, y
                   compartir los videos para que más y más personas vivan un
                   cristianismo feliz
-                </h1>
+                </span>
                 <div className="flex justify-center mt-1">
                   <iframe
                     width="1200"
@@ -65,10 +65,10 @@ const Home = ({ articles, categories, homepage }) => {
                     ¡NUEVO GRUPO EN FACEBOOK!
                   </h1>
                 </div>
-                <h1 className="text-4xl text-center mb-10">
+                <span className="text-4xl text-center mb-10">
                   No olvides unirte y compartir los artículos para que más y más
                   personas vivan un cristianismo feliz
-                </h1>
+                </span>
                 <a
                   href="https://www.facebook.com/groups/1257994208210335"
                   target="_blank"
