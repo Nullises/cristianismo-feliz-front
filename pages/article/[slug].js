@@ -60,23 +60,20 @@ const Article = ({ article, categories }) => {
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div className="bg-article">
               {article.attributes.author.data.attributes.picture && (
-                <div
+                <img
                   style={{
                     position: "static",
                     borderRadius: "20%",
                     height: 60,
                   }}
-                >
-                  <Image
-                    src={getStrapiMedia(
-                      article.attributes.author.data.attributes.picture
-                    )}
-                    alt={
-                      article.attributes.author.data.attributes.picture.data
-                        .attributes.alternativeText
-                    }
-                  />
-                </div>
+                  src={getStrapiMedia(
+                    article.attributes.author.data.attributes.picture
+                  )}
+                  alt={
+                    article.attributes.author.data.attributes.picture.data
+                      .attributes.alternativeText
+                  }
+                />
               )}
             </div>
             <div className="uk-width-expand">
