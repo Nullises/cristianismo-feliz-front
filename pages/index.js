@@ -58,7 +58,7 @@ const Home = ({ articles, categories, homepage }) => {
                 </div>
               </div>
             </div>
-            <div className="uk-section">
+            {/*<div className="uk-section">
               <div className="uk-container">
                 <div className="flex justify-center self-center mb-8 mt-2">
                   <h1 className="text-5xl text-center">
@@ -77,7 +77,7 @@ const Home = ({ articles, categories, homepage }) => {
                   <Image src={fb_hero} alt="Cristianismo Feliz" />
                 </a>
               </div>
-            </div>
+  </div>*/}
             <h1 className="text-4xl text-center mb-10">ARTÍCULOS</h1>
             <DynamicArticles articles={articles} />
           </div>
